@@ -107,7 +107,8 @@ footerPara[0].textContent = siteContent['footer']['copyright']
 //appendChild
 let newContent = document.createElement("p");
 newContent.textContent = "Site created by Alanna Mathieu";
-newContent.style.textAlign = 'center'
+newContent.setAttribute(
+       "style", "color: gray; background-color: cyan; padding: 10px 0; margin: 3px; text-align: center;");
 
 let body = document.querySelector('body');
 body.appendChild(newContent)
@@ -115,7 +116,7 @@ body.appendChild(newContent)
 //prepend
 let prependContent = document.createElement("p");
 prependContent.textContent = 'Welcome';
-prependContent.style.textAlign = 'center'
-
+prependContent.setAttribute(
+       "style", "color: gray; background-color: cyan; padding: 10px 0; margin: 3px; text-align: center;");
 let text = document.querySelector('body');
 text.prepend(prependContent)
