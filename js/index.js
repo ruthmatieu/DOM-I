@@ -120,3 +120,5 @@ prependContent.setAttribute(
        "style", "color: gray; background-color: cyan; padding: 10px 0; margin: 3px; text-align: center;");
 let text = document.querySelector('body');
 text.prepend(prependContent)
+
+//applying JS styles
