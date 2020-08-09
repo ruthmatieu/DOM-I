@@ -121,4 +121,32 @@ prependContent.setAttribute(
 let text = document.querySelector('body');
 text.prepend(prependContent)
 
-//applying JS styles
+//STRETCH: applying JS styles and event handler
+let headerStyles = document.querySelector('h1');
+headerStyles.style.color = 'crimson';
+
+//event handler
+let colorPalette = document.querySelector('button'),
+      colors      = ['aquamarine', 
+                    'coral', 
+                    'palegreen', 
+                    'powderblue', 
+                    'salmon',
+                    'papayawhite',
+                    'slategray',
+                    'thistle',
+                    'turquoise',
+                    'gold',
+                    'deeppink'];
+let   colorIndex  = 0;
+
+colorPalette.addEventListener('click', () => {
+  headerStyles.style.color = colors[colorIndex];      
+  colorIndex = (colorIndex + 1) % colors.length
+});
+
+// colorPalette.addEventListener('click', () => {
+//   headerStyles.style.color = colors.forEach(item => {
+//     return (item + 1) % item.length;
+//   })
+// });
